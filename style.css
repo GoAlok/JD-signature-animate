@@ -1,0 +1,161 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(./font/Montserrat-VariableFont_wght.ttf);
+
+}
+@font-face {
+    font-family: "PlayFair Display";
+    src: url(./font/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    overflow-x: hidden;
+
+    font-family: "Montserrat";
+}
+
+.main-container {
+    /* display: none; */
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background-color: black;
+}
+
+svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    stroke-dashoffset: 1000px;
+    stroke-dasharray: 1000px;
+}
+
+.animate{
+    animation: animation 10s cubic-bezier(0.19, 1, 0.22, 1)    both;
+}
+
+#circle {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border: 1.2px solid #fff;
+    border-radius: 50%;
+    z-index: 999;
+
+    pointer-events: none;
+}
+
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: contain;
+    background-position: 60%;
+    background-image: url(./images/1.jpg);
+}
+
+
+.wrapper h1 {
+    color: #fff;
+    font-size: 600px;
+    font-weight: 900;
+}
+
+.white-strip {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 56%;
+    transform: translate(0%, -50%);
+    height: 140px;
+    background-color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.black-card{
+    position: absolute;
+    width: 230px;
+    height: 330px;
+    background-color: #000;
+
+    top :50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+}
+
+.black-card p{
+    color: #fff;
+    font-size: 0.85rem;
+    font-family: "PlayFair Display";
+    text-align: center;
+    line-height: 26px;
+}
+
+.line-element{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line-element .line{
+    width: 150px;
+    height: 2px;
+    margin: 0 30px ;
+    background-color: #000;
+}
+
+.white-strip .line-element img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+main>h5{
+    position: absolute;
+    top: 50%;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 15px;
+    transform: rotate(-90deg);
+    font-size: 8px;
+    font-family: "Montserrat";
+}
+
+@keyframes animation{
+    to{
+        stroke-dasharray: 450px;
+    }
+}
